@@ -15,7 +15,7 @@ public class GraphWalkerTest {
     private static final GNode H = new Node("H", new GNode[]{});
     private static final GNode G = new Node("G", new GNode[]{});
     private static final GNode C = new Node("C", new GNode[]{G, H, I});
-    private static final GNode F = new Node("F", new GNode[]{C});
+    private static final GNode F = new Node("F", new GNode[]{});
     private static final GNode E = new Node("E", new GNode[]{});
     private static final GNode B = new Node("B", new GNode[]{E, F});
     private static final GNode A = new Node("A", new GNode[]{B, C, D});
@@ -40,9 +40,7 @@ public class GraphWalkerTest {
 
         List<List<GNode>> expected = Arrays.asList(
                 Arrays.asList(A, B, E),
-                Arrays.asList(A, B, F, C, G),
-                Arrays.asList(A, B, F, C, H),
-                Arrays.asList(A, B, F, C, I),
+                Arrays.asList(A, B, F),
                 Arrays.asList(A, C, G),
                 Arrays.asList(A, C, H),
                 Arrays.asList(A, C, I),
